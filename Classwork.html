@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+      <head>
+	       <title>Web Page</title>
+		  
+		   
+	  </head>
+	  
+  <body style="background-color:	rgb(134, 140, 115)">
+	     <center>
+              	<h style="font-size:50px">Java Script Input Validation Check</h>
+        
+        <br>
+		<br>
+		 <br>
+		<br>
+			 <form name="my">
+			      
+	                 <div>				
+					 <input type="text" name="name" id="name" style="height:30px; width:300px; font-size:25px;" placeholder="Enter Your Name">
+					 </div>
+					 
+					 <br>
+					 
+					 <div>				
+					 <input type="password" name="pass" id="pass" style="height:30px; width:300px; font-size:25px;" placeholder="Enter Your password">
+					 </div>
+					 <br>
+					 
+				<div>
+					 
+					 <select name="gen" id="gen" style="height:35px; width:300px; font-size:25px;">
+					     <option  selected value>Select Your Gender</option>
+						 <option value="Male">Male</option>
+						 <option value="Female">Female</option>
+						 <option value="Others">Others</option>
+					</select>
+					 </div>
+					 
+					 <br>
+					 
+					  <div>					 
+					  <input type="email" name="email" id="email" style="height:30px; width:300px; font-size:25px;" placeholder="Enter Email Address">					
+					  </div>
+					  
+					   <br>
+					   
+					  <div>
+					 <input type="text" name="capt" id="capt" style="width:200px; height:30px; font-size:25px; background-color:#002699; color:red"; readonly>
+					<input type="button" style="height:35px;width:100px; font-size:20px" id="refresh" value="Refresh" onclick="cap();"> 
+					</div>
+					
+					<br>
+					
+					<div>
+					<input type="text" name="capentry" id="capentry" style="height:30px; width:300px; font-size:25px;" placeholder="Enter The Captcha" >
+					 
+					 </div>
+					 
+					 <br>
+					 
+					 
+					 <div>
+					
+					 <input type="button"  style="height:35px; width:150px; font-size:25px;" value="Register" onclick="validation();">
+					 	
+					 </div>
+		
+          </center>
+		  
+		  <script type="text/javascript">
+		  
+		  	function validation()
+					 {
+					   var name = document.getElementById('name').value;
+					   var pass = document.getElementById('pass').value;
+					   var gen = document.getElementById('gen').value;
+					   var email = document.getElementById('email').value;
+					   var capentry = document.getElementById('capentry').value;
+					   var capt = document.getElementById('capt').value;
+					   
+					    if (name == "" )
+						{
+							 alert("Enter Your Name");
+						}
+						
+						if (pass == "" )
+						{
+							 alert("Enter Your password");
+						}
+						if (gen == "" )
+						{
+							 alert("Select your Gender");
+						}
+						if (email == "" )
+						{
+							 alert("Enter Your Email");
+						}
+						if (capentry == "" )
+						{
+							 alert("Enter Captcha");
+						}
+						if (capentry !== capt )
+						{
+							 alert("Enter Right Captcha");
+						}
+						
+						
+						else
+						{
+						    alert("Registration Successful");
+						}
+					 
+					 }
+					 
+				function cap()
+					 {
+						 var alpha=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+						 
+						 var a = alpha[Math.floor(Math.random()*26)];
+						 var b = alpha[Math.floor(Math.random()*26)];
+						 var c = alpha[Math.floor(Math.random()*26)];
+						 var d = alpha[Math.floor(Math.random()*26)];
+						 var e = alpha[Math.floor(Math.random()*26)];
+						 var f = alpha[Math.floor(Math.random()*26)];
+						 
+						 var captcha = a+b+c+d+e+f;
+						 
+						 document.getElementById("capt").value=captcha;
+					 
+					 }
+					 
+				
+					 
+			</script>
+		  
+		  
+		 </form>		
+	</body>				
+					 
+					 
+</html>
